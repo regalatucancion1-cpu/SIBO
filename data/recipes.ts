@@ -1,6 +1,7 @@
 import type { Recipe } from "@/lib/types";
+import { extraRecipes } from "./recipes-extra";
 
-export const recipes: Recipe[] = [
+const baseRecipes: Recipe[] = [
   {
     id: "pollo-limon-arroz",
     name: "Pollo al limón con arroz blanco",
@@ -131,3 +132,5 @@ export const recipes: Recipe[] = [
     ],
   },
 ];
+
+export const recipes: Recipe[] = [...baseRecipes, ...extraRecipes];
