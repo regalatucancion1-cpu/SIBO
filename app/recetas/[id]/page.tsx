@@ -21,15 +21,15 @@ export default async function RecipeDetailPage({
     <div className="space-y-6">
       <Link
         href="/recetas"
-        className="inline-flex items-center gap-1 text-sm text-stone-600 hover:text-stone-900"
+        className="inline-flex items-center gap-1 text-sm text-stone-800 hover:text-stone-900"
       >
         ← Recetas
       </Link>
 
       <header>
         <h1 className="text-2xl font-bold">{recipe.name}</h1>
-        <p className="text-stone-600 mt-2">{recipe.description}</p>
-        <div className="flex flex-wrap gap-4 mt-4 text-sm text-stone-600">
+        <p className="text-stone-800 mt-2">{recipe.description}</p>
+        <div className="flex flex-wrap gap-4 mt-4 text-sm text-stone-800">
           <span>⏱ {recipe.prepTimeMin} min</span>
           <span>👥 {recipe.servings} raciones</span>
           <span>💶 {recipe.priceTotal.toFixed(2)}€ total</span>
@@ -42,7 +42,7 @@ export default async function RecipeDetailPage({
       <section>
         <div className="flex items-baseline justify-between mb-3">
           <h2 className="text-lg font-semibold">Ingredientes</h2>
-          <p className="text-xs text-stone-700">Pulsa + para añadir al carro</p>
+          <p className="text-xs text-stone-800">Pulsa + para añadir al carro</p>
         </div>
         <IngredientsList ingredients={recipe.ingredients} />
       </section>

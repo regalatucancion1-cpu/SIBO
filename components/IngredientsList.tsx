@@ -49,7 +49,7 @@ export function IngredientsList({
                 <p className="font-medium truncate">
                   {food?.name ?? ing.foodId}
                 </p>
-                <p className="text-xs text-stone-700">
+                <p className="text-xs text-stone-800">
                   {ing.quantity}
                   {ing.optional ? " · opcional" : ""}
                 </p>

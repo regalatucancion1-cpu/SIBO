@@ -43,7 +43,7 @@ export default function SearchPage() {
     <div className="space-y-5">
       <header>
         <h1 className="text-2xl font-bold">Buscar alimento</h1>
-        <p className="text-sm text-stone-700 mt-1">
+        <p className="text-sm text-stone-800 mt-1">
           Escribe el nombre y mira si es apto, según porción o evitar.
         </p>
       </header>
@@ -61,7 +61,7 @@ export default function SearchPage() {
           <button
             type="button"
             onClick={() => setQuery("")}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-700 text-xl"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-800 hover:text-stone-800 text-xl"
             aria-label="Limpiar"
           >
             ✕
@@ -78,7 +78,7 @@ export default function SearchPage() {
             className={`shrink-0 px-4 py-2 rounded-full text-sm font-medium border transition ${
               filter === f.value
                 ? "bg-stone-900 text-white border-stone-900"
-                : "bg-white text-stone-700 border-stone-200"
+                : "bg-white text-stone-800 border-stone-200"
             }`}
           >
             {f.icon} {f.label}
@@ -91,7 +91,7 @@ export default function SearchPage() {
           <FoodCard food={topResult} />
           {rest.length > 0 && (
             <section className="space-y-2">
-              <h2 className="text-sm font-semibold text-stone-700 uppercase tracking-wide mt-4">
+              <h2 className="text-sm font-semibold text-stone-800 uppercase tracking-wide mt-4">
                 Más resultados ({rest.length})
               </h2>
               <ul className="space-y-2">
@@ -105,7 +105,7 @@ export default function SearchPage() {
           )}
         </>
       ) : (
-        <div className="text-center py-12 text-stone-700">
+        <div className="text-center py-12 text-stone-800">
           <p className="text-4xl mb-3">🤷‍♀️</p>
           <p>No hay resultados para "{query}"</p>
           <p className="text-xs mt-2">Prueba con otro nombre o quita filtros.</p>

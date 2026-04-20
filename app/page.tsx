@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <div className="space-y-8">
       <header>
-        <p className="text-base text-stone-700 font-semibold">Hola MOCHITO 👋</p>
+        <p className="text-base text-stone-800 font-semibold">Hola MOCHITO 👋</p>
         <h1 className="text-3xl font-bold mt-1 text-stone-900">¿Qué comemos hoy?</h1>
       </header>
 
@@ -23,7 +23,7 @@ export default function HomePage() {
           <span className="text-2xl">🔍</span>
           <div>
             <p className="font-semibold">Buscar un alimento</p>
-            <p className="text-sm text-stone-700">
+            <p className="text-sm text-stone-800">
               Mira si es apto antes de comprar o cocinar
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function HomePage() {
                 className="block p-4 bg-white rounded-2xl border border-stone-200 hover:border-stone-400 transition"
               >
                 <p className="font-semibold">{r.name}</p>
-                <p className="text-sm text-stone-700 mt-1">
+                <p className="text-sm text-stone-800 mt-1">
                   ⏱ {r.prepTimeMin} min · 👥 {r.servings} raciones · 💶{" "}
                   {r.pricePerServing.toFixed(2)}€/ración
                 </p>
@@ -88,7 +88,7 @@ function StatCard({
   return (
     <div className="p-3 bg-white rounded-xl border border-stone-200 text-center">
       <p className={`text-2xl font-bold ${color}`}>{value}</p>
-      <p className="text-xs text-stone-700 mt-1 leading-tight">{label}</p>
+      <p className="text-xs text-stone-800 mt-1 leading-tight">{label}</p>
     </div>
   );
 }
