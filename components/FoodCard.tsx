@@ -37,7 +37,7 @@ export function FoodCard({
           <span className="text-xl shrink-0">{statusEmoji[food.status]}</span>
           <div className="min-w-0">
             <p className="font-medium truncate">{food.name}</p>
-            <p className="text-xs text-stone-500 truncate">{food.category}</p>
+            <p className="text-xs text-stone-700 truncate">{food.category}</p>
           </div>
         </div>
         <span

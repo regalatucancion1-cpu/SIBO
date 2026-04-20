@@ -43,7 +43,7 @@ export default function SearchPage() {
     <div className="space-y-5">
       <header>
         <h1 className="text-2xl font-bold">Buscar alimento</h1>
-        <p className="text-sm text-stone-500 mt-1">
+        <p className="text-sm text-stone-700 mt-1">
           Escribe el nombre y mira si es apto, según porción o evitar.
         </p>
       </header>
@@ -91,7 +91,7 @@ export default function SearchPage() {
           <FoodCard food={topResult} />
           {rest.length > 0 && (
             <section className="space-y-2">
-              <h2 className="text-sm font-semibold text-stone-500 uppercase tracking-wide mt-4">
+              <h2 className="text-sm font-semibold text-stone-700 uppercase tracking-wide mt-4">
                 Más resultados ({rest.length})
               </h2>
               <ul className="space-y-2">
@@ -105,7 +105,7 @@ export default function SearchPage() {
           )}
         </>
       ) : (
-        <div className="text-center py-12 text-stone-500">
+        <div className="text-center py-12 text-stone-700">
           <p className="text-4xl mb-3">🤷‍♀️</p>
           <p>No hay resultados para "{query}"</p>
           <p className="text-xs mt-2">Prueba con otro nombre o quita filtros.</p>

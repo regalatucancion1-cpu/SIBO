@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { recipes } from "@/data/recipes";
-import { foodsById } from "@/data/foods";
 import { AddRecipeButton } from "@/components/AddRecipeButton";
+import { IngredientsList } from "@/components/IngredientsList";
 
 export function generateStaticParams() {
   return recipes.map((r) => ({ id: r.id }));
@@ -40,33 +40,11 @@ export default async function RecipeDetailPage({
       <AddRecipeButton recipeId={recipe.id} />
 
       <section>
-        <h2 className="text-lg font-semibold mb-3">Ingredientes</h2>
-        <ul className="space-y-2">
-          {recipe.ingredients.map((ing, idx) => {
-            const food = foodsById[ing.foodId];
-            return (
-              <li
-                key={idx}
-                className="flex items-center justify-between gap-3 p-3 bg-white rounded-xl border border-stone-200"
-              >
-                <div>
-                  <p className="font-medium">{food?.name ?? ing.foodId}</p>
-                  <p className="text-xs text-stone-500">
-                    {ing.quantity}
-                    {ing.optional ? " · opcional" : ""}
-                  </p>
-                </div>
-                <span className="text-xl">
-                  {food?.status === "permitido"
-                    ? "🟢"
-                    : food?.status === "depende"
-                      ? "🟡"
-                      : "🔴"}
-                </span>
-              </li>
-            );
-          })}
-        </ul>
+        <div className="flex items-baseline justify-between mb-3">
+          <h2 className="text-lg font-semibold">Ingredientes</h2>
+          <p className="text-xs text-stone-700">Pulsa + para añadir al carro</p>
+        </div>
+        <IngredientsList ingredients={recipe.ingredients} />
       </section>
 
       <section>

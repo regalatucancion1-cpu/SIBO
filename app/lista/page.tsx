@@ -38,7 +38,7 @@ export default function ListPage() {
       <header className="flex items-start justify-between gap-3">
         <div>
           <h1 className="text-2xl font-bold">Lista de la compra</h1>
-          <p className="text-sm text-stone-500 mt-1">
+          <p className="text-sm text-stone-700 mt-1">
             {totalItems === 0
               ? "Aún no tienes nada en la lista"
               : `${checkedItems} de ${totalItems} comprados`}
@@ -50,7 +50,7 @@ export default function ListPage() {
               <button
                 type="button"
                 onClick={clearChecked}
-                className="text-xs text-stone-500 underline"
+                className="text-xs text-stone-700 underline"
               >
                 Quitar comprados
               </button>
@@ -86,7 +86,7 @@ export default function ListPage() {
       </form>
 
       {totalItems === 0 ? (
-        <div className="text-center py-16 text-stone-500">
+        <div className="text-center py-16 text-stone-700">
           <p className="text-4xl mb-3">🛒</p>
           <p className="font-medium">La lista está vacía</p>
           <p className="text-xs mt-2">
@@ -100,7 +100,7 @@ export default function ListPage() {
             if (!catItems || catItems.length === 0) return null;
             return (
               <section key={category}>
-                <h2 className="text-sm font-semibold text-stone-500 uppercase tracking-wide mb-2">
+                <h2 className="text-sm font-semibold text-stone-700 uppercase tracking-wide mb-2">
                   {category}
                 </h2>
                 <ul className="space-y-1">
@@ -132,7 +132,7 @@ export default function ListPage() {
                           }`}
                         >
                           <p className="font-medium truncate">{name}</p>
-                          <p className="text-xs text-stone-500">
+                          <p className="text-xs text-stone-700">
                             {item.quantity}
                           </p>
                         </div>

@@ -28,7 +28,7 @@ export function TabBar() {
                 className={`flex flex-col items-center gap-1 py-3 text-xs transition-colors ${
                   active
                     ? "text-green-700 font-semibold"
-                    : "text-stone-500 hover:text-stone-800"
+                    : "text-stone-600 hover:text-stone-800"
                 }`}
               >
                 <span className="text-xl">{tab.icon}</span>

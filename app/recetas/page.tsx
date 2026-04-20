@@ -6,7 +6,7 @@ export default function RecipesPage() {
     <div className="space-y-5">
       <header>
         <h1 className="text-2xl font-bold">Recetas</h1>
-        <p className="text-sm text-stone-500 mt-1">
+        <p className="text-sm text-stone-700 mt-1">
           Todas las recetas usan solo ingredientes aptos para SIBO.
         </p>
       </header>
@@ -21,7 +21,7 @@ export default function RecipesPage() {
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
                   <h2 className="font-semibold">{r.name}</h2>
-                  <p className="text-sm text-stone-500 mt-1 line-clamp-2">
+                  <p className="text-sm text-stone-700 mt-1 line-clamp-2">
                     {r.description}
                   </p>
                 </div>
